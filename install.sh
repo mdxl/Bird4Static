@@ -17,7 +17,7 @@ ifconfig | grep -B 1 "inet addr" | awk '{print $1$2}' | awk '!/--/' | sed -e 's/
 echo "Введите имя интерфейса провайдера из списка выше (например ppp0 или eht3)"
 read ISP
 sed -i 's/eth3/'$ISP'/' /opt/etc/cron.daily/add-bird4_routes.sh
-echo "Введите имя интерфейса провайдера из списка выше (например ppp1 или nikecli0)"
+echo "Введите имя интерфейса VPN из списка выше (например ppp1 или nikecli0)"
 read VPN
 sed -i 's/ppp0/'$VPN'/' /opt/etc/cron.daily/add-bird4_routes.sh
 
